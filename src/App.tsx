@@ -1,4 +1,5 @@
-import { RendererProvider } from 'react-fela'
+import React from 'react';
+import {RendererProvider} from 'react-fela';
 import createFelaRenderer from './felaRenderer';
 import AppContainer from './AppContainer';
 
@@ -10,6 +11,6 @@ const App = () => {
       <AppContainer />
     </RendererProvider>
   );
-}
+};
 
 export default App;

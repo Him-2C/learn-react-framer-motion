@@ -1,11 +1,11 @@
-import {IStyle} from 'fela';
-import {CssFunction, useFela} from 'react-fela';
+import React from 'react';
+import {useFela} from 'react-fela';
 import logo from './logo.svg';
 const AppContainer: React.FC = () => {
   const {css} = useFela();
 
   return (
-    <div className={css({display: ''})}>
+    <div className={css({textAlign: 'center'})}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,5 +22,5 @@ const AppContainer: React.FC = () => {
       </header>
     </div>
   );
-}
+};
 export default AppContainer;

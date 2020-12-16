@@ -1,12 +1,12 @@
-import { createRenderer } from 'fela'
+import {createRenderer} from 'fela';
 import felaTS from 'fela-plugin-typescript';
-import plugins from 'fela-preset-web'
+import plugins from 'fela-preset-web';
 
 const createFelaRenderer = () => createRenderer({
   plugins: [
     ...plugins,
-    felaTS()
-  ]
+    felaTS(),
+  ],
 });
 
 export default createFelaRenderer;
