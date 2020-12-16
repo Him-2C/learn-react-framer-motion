@@ -1,11 +1,13 @@
 import React from 'react';
-import {useFela} from 'react-fela';
-import logo from './logo.svg';
+import {CssFunction, useFela} from 'react-fela';
+import logo from './assets/logo.svg';
+
 const AppContainer: React.FC = () => {
   const {css} = useFela();
+  const styles = createSylesSheet(css);
 
   return (
-    <div className={css({textAlign: 'center'})}>
+    <div className={styles.Container}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -23,4 +25,10 @@ const AppContainer: React.FC = () => {
     </div>
   );
 };
+
+const createSylesSheet = <T, P>(css: CssFunction<T, P>) => ({
+  Container: css({
+    textAlign: 'center',
+  }),
+});
 export default AppContainer;
