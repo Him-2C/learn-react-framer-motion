@@ -61,7 +61,7 @@ const createSylesSheet = () => {
     }),
     CardImage: css({
       height: '100%',
-      width: 'auto',
+      width: '100%',
       objectFit: 'cover',
     }),
   });
